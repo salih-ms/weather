@@ -1,129 +1,99 @@
 .container {
-  padding: 0 2rem;
+  width: 80%;
+  margin: 0px auto;
 }
-
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  background-image: url(../public/confidence-gap-adam-eastburn.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+.weather {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.weather > div {
+  width: 50%;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.weather_right {
   text-align: center;
+
+  background-color: #031e49;
+  border: 5px solid #286095;
+  border-radius: 12px;
+  padding: 25px 40px;
+  color: #fff;
+}
+.temprature {
+  padding: 25px 0 10px 0;
+}
+.city {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.temprature_icon > .sunnyIcon {
+  font-size: 46px;
+}
+.temprature_icon p {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.temprature_val h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.wind {
+  line-height: 0.8;
+  font-size: 14px;
+  text-align: start;
+}
+.sunnyIcon {
+  color: #ffa500;
 }
 
-.grid {
+.temprature,
+.week {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+}
+.week .day .sunnyIcon {
+  font-size: 18px;
+}
+.week .day p:last-child {
+  font-weight: 500;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+/* ................................ */
+.left_content {
+  width: 80%;
+  line-height: 1.8;
+  color: #ddd;
+}
+.left_content h2:first-child {
+  font-size: 32px;
+  line-height: 1.4;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
+.left_content h2:last-child {
+  background-color: rgba(7, 9, 64, 0.236);
+  border-radius: 15px;
+  display: inline-block;
+  padding: 2px 20px 5px 10px;
   margin: 0;
-  font-size: 1.25rem;
+  color: #fff;
+}
+.left_content p {
+  font-size: 18px;
   line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
 }
