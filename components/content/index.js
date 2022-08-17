@@ -1,10 +1,26 @@
 import Styles from "../../styles/Home.module.css";
 import { MdWbSunny } from "react-icons/md";
+import { useEffect } from "react";
 const Weather = () => {
+  const res = async () => {
+    const response = await fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=şanliurfa&appid=16f465550398b5de6bacd612e485105a`
+    );
+    const data = await response.json();
+    console.table(data);
+  };
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition();
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }, []);
   return (
     <div className={Styles.main}>
       <div className={Styles.content}>
         <div className={Styles.container}>
+          <button onClick={res}>serach</button>
           <div className={Styles.weather}>
             <div className={Styles.weather_left}>
               <div className={Styles.left_content}>
